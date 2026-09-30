@@ -1,0 +1,106 @@
+:root {
+  color-scheme: dark;
+  font-family: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  background: #000;
+  color: #e8eef5;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #app { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+
+#app { display: flex; align-items: center; justify-content: center; background: #000; }
+
+#stage {
+  position: relative;
+  width: min(100vw, 177.77777778vh);
+  max-height: 100vh;
+  overflow: hidden;
+  background: #000;
+}
+
+.mv-canvas { display: block; width: 100%; height: 100%; }
+
+#overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1920px;
+  height: 1080px;
+  transform-origin: top left;
+  pointer-events: none;
+}
+
+.scene-overlay { position: absolute; inset: 0; }
+
+.annotation {
+  position: absolute;
+  white-space: pre;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.045em;
+  color: #dce6f0;
+  opacity: 0;
+  text-shadow: 0 0 9px rgba(165, 192, 223, 0.12);
+}
+
+.annotation-terminal { font-size: 15px; line-height: 1.9; color: #cad6e3; }
+.annotation-origin { font-size: 17px; }
+.annotation-plane { left: 1540px; top: 130px; font-size: 24px; }
+.annotation-domains { left: 1540px; top: 178px; font-size: 14px; color: #91a4b8; }
+.annotation-formula { left: 1190px; top: 275px; font-size: 22px; }
+.annotation-param { left: 1190px; top: 322px; font-size: 14px; color: #a7b9cb; }
+.annotation-zformula { left: 1490px; top: 210px; font-size: 22px; }
+.annotation-dimension { left: 1470px; top: 258px; font-size: 14px; color: #a7b9cb; }
+.annotation-complete { left: 112px; top: 128px; font-size: 17px; letter-spacing: 0.18em; }
+.annotation-circle0, .annotation-circle1, .annotation-circle2, .annotation-circle3 { font-size: 13px; color: #9aafc3; }
+
+#controls {
+  position: fixed;
+  left: 50%;
+  bottom: 17px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: min(660px, calc(100vw - 32px));
+  padding: 8px 12px;
+  border: 1px solid rgba(170, 193, 217, 0.25);
+  background: rgba(0, 0, 0, 0.82);
+  color: #aebdcd;
+  font-size: 11px;
+  z-index: 5;
+}
+
+#controls button {
+  border: 0;
+  background: none;
+  color: #dce6f0;
+  font: inherit;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+#controls input { flex: 1; min-width: 0; accent-color: #9cb4ce; }
+.time-readout { min-width: 105px; text-align: right; }
+
+#debug {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  padding: 12px 15px;
+  border-left: 1px solid #5c7188;
+  background: rgba(0, 0, 0, 0.8);
+  white-space: pre;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #94a9bf;
+  z-index: 6;
+}
+
+#debug pre { margin: 0; font: inherit; }
+.debug-beats { margin-top: 8px; color: #b8c8d9; letter-spacing: 0.16em; }
+
+.fatal-error { position: fixed; left: 24px; top: 24px; color: #e8eef5; font-size: 14px; }

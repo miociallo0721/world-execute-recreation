@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0c0c0e"><meta name="description" content="world.execute(me); 全片复刻，随音乐观看，或从章节跳转。">
+  <link rel="icon" href="data:,"><title>world.execute(me); · 全片复刻</title>
+</head>
+<body>
+<main>
+  <header class="masthead"><div><p class="eyebrow">MILI · RECREATION</p><h1>world.execute(me);</h1></div><span class="edition">全片复刻 <span>03:56</span></span></header>
+  <section class="player" aria-label="影片播放器">
+    <div id="stage" aria-label="world.execute(me); 动画画面"></div>
+    <div id="controls">
+      <div class="timeline"><input id="seek" type="range" min="0" max="236.402" step="0.001" aria-label="播放进度"><output id="time">00:00.000 / 03:56.402</output></div>
+      <div class="transport"><button id="play" type="button" aria-pressed="false">播放</button><div class="now-playing"><span class="status-dot"></span><span id="current-chapter">序章</span></div><span class="soundtrack">原版配乐 <span>· Mili</span></span></div>
+      <p id="player-status" role="status" hidden></p>
+    </div>
+  </section>
+  <nav class="chapters" aria-label="影片章节">
+    <div class="chapter-heading"><h2>章节</h2><p>从任意一段开始</p></div>
+    <div class="chapter-grid">
+      <a href="?t=0"><span class="chapter-number">01</span><span>序章</span><time>00:00</time></a>
+      <a href="?t=18.5"><span class="chapter-number">02</span><span>片名</span><time>00:18</time></a>
+      <a href="?t=32.9"><span class="chapter-number">03</span><span>数学</span><time>00:32</time></a>
+      <a href="?t=52.6"><span class="chapter-number">04</span><span>时间旅行</span><time>00:52</time></a>
+      <a href="?t=83.5"><span class="chapter-number">05</span><span>猫</span><time>01:23</time></a>
+      <a href="?t=94.5"><span class="chapter-number">06</span><span>配置</span><time>01:34</time></a>
+      <a href="?t=110.5"><span class="chapter-number">07</span><span>管理系统</span><time>01:50</time></a>
+      <a href="?t=120"><span class="chapter-number">08</span><span>后半段</span><time>02:00</time></a>
+      <a href="?t=125.35"><span class="chapter-number">09</span><span>错误</span><time>02:05</time></a>
+      <a href="?t=150"><span class="chapter-number">10</span><span>执行</span><time>02:30</time></a>
+      <a href="?t=172.6"><span class="chapter-number">11</span><span>恢复</span><time>02:52</time></a>
+      <a href="?t=186.6"><span class="chapter-number">12</span><span>心形</span><time>03:06</time></a>
+      <a href="?t=195.5"><span class="chapter-number">13</span><span>重建</span><time>03:15</time></a>
+      <a href="?t=213.8"><span class="chapter-number">14</span><span>片尾</span><time>03:33</time></a>
+    </div>
+  </nav>
+  <footer><span>画面随原版音轨同步播放</span><span class="keyboard-hint"><kbd>Space</kbd> 播放 / 暂停 <span>·</span> <kbd>←</kbd> <kbd>→</kbd> 跳转 5 秒</span></footer>
+</main>
+<script type="module" src="/src/main.ts"></script>
+</body></html>
